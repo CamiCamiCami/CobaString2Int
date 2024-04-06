@@ -1,5 +1,5 @@
 .data
-input: .asciiz "104857577"
+input: .asciiz "69687"
 text_exception: .asciiz "Valor fuera de limites: El string de entrada puede tener 8 caracters como maximo y debe ser finalizado por un terminador (null char)"
 
 .text
@@ -68,18 +68,18 @@ check8s:
 	srl $t0, $t0, 4
 	sllv $t1, $t1, $t8
 	add $t0, $t0, $t1
-
-clear_repeat:
+	
 	and $t1, $t1, $zero
 	and $t2, $t2, $zero
 	addi $t7, $t7, 1
 	j check8s
 
-illegall_arg_exception:
+illegall_input_exception:
 	addi $v0, $zero, 4
 	la $a0, text_exception
 	syscall 
 	j exit	
 exit:
-	
+	add $v0, $zero, 10
+	syscall
       
