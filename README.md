@@ -9,7 +9,7 @@
  	El segundo pasa de codigo bcd a binario implementando el un Double Dabble inverso. El codigo que chequea cada digito y y resta 3 si es mayor a 8 fue implementado aparte por su complejidad.
 
 
-
+	Los Registros
 	t0-t2		Registros Auxiliares
 	t5		Salida del programa
 	t6		Contador para el algoritmo que convierte de bcd -> binario
